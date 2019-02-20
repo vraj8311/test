@@ -7,10 +7,10 @@ jobs:
       - run:
           name: Build image
           command: |
-            ls -lR
+            PWD
       - run:
           name: Build image
-          command: docker build -f ~/project/Dockerfile 
+          command: docker build -f ~/project/Dockerfile
       - run:
           name: Test image
           command: |
