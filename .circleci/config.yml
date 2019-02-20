@@ -7,7 +7,15 @@ jobs:
       - run:
           name: Build image
           command: |
-            pwd
+            ls -lR /home/circleci/project/
+      - run:
+          name: Build image
+          command: |
+            ls -lR /home/circleci/
+      - run:
+          name: Build image
+          command: |
+            ls -lR /home/
       - run:
           name: Build image
           command: docker build -f ~/project/Dockerfile
