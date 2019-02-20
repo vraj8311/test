@@ -6,6 +6,10 @@ jobs:
       # ...
       - run:
           name: Build image
+          command: |
+          ls -lR      
+      - run:
+          name: Build image
           command: docker build -t test .
       - run:
           name: Test image
