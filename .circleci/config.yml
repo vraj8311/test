@@ -7,7 +7,7 @@ jobs:
       - run:
           name: Build image
           command: |
-            ls -lR /home/circleci/project/
+            git clone https://github.com/semopuri/test.git
       - run:
           name: Build image
           command: |
