@@ -1,8 +1,13 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.4.1
+    # ...
     steps:
-      - checkout
-      - run: echo "A first hello"
+      # ...
+      - run:
+          name: Build image
+          command: docker build -t $FULL_IMAGE_NAME .
+      - run:
+          name: Test image
+          command: |
+            docker run -d -p 8080:8080 --name built-image $FULL_IMAGE_NAME
