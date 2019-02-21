@@ -10,8 +10,8 @@ jobs:
             git clone https://github.com/semopuri/test.git
       - run:
           name: Build image
-          command: docker build -t test -f /home/circleci/project/test/Dockerfile
+          command: ls -lR
       - run:
           name: Test image
           command: |
-            docker run -d -p 8080:8080 --name built-image test
+            echo test
