@@ -14,4 +14,4 @@ jobs:
       - run:
           name: Test image
           command: |
-            docker build -t test -f ./test/Dockerfile
+            docker build -f ./test/Dockerfile
