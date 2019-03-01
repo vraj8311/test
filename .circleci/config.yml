@@ -6,10 +6,6 @@ jobs:
       # ...
       - run:
           name: Build image
-          command: |
-            git clone https://github.com/semopuri/test.git
-      - run:
-          name: Build image
           working_directory: test
           command: docker build -t test-docker .
       - run:
